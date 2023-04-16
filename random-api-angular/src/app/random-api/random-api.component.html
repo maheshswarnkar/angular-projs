@@ -1,0 +1,206 @@
+<p>random-api works!</p>
+--------------------------------------------------------
+<p>Now printing random.user.api data into console..Press F12 and then see..</p>
+--------------------------------------------------------
+<!--<p>{{results[0].gender}}</p> -->
+------------------------------------------------------
+<!-- The "pre" tag is used to preserve formatting and display the JSON string as it is. 
+  The "json" pipe will convert the JSON object to a string and format it for display
+-->
+<p>
+  <button (click)="getRandomApiResponseData()">Get the Random API Data</button>
+</p>
+
+<table style="width: 100%;" border="2">
+  <tr>
+    <th style="width: 25%;">Column 1</th>
+    <th style="width: 25%;">Column 2</th>
+    <th style="width: 25%;">Column 2</th>
+    <th style="width: 25%;">Column 3</th>
+  </tr>
+  <tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+    <td>Row 1, Cell 3</td>
+    <td>Row 1, Cell 4</td>
+  </tr>
+  <tr>
+    <td>Row 2, Cell 1Sdfskdfaldkfasldjfaldjflasdjflasdjflad</td>
+    <td>Row 2, Cell 2</td>
+    <td>Row 2, Cell 3sadfasdfjalsdjflasdf</td>
+    <td>Row 2, Cell 4</td>
+  </tr>
+</table>
+
+
+<!-- <table style="width: 100%;"  border="1">
+    <!-- Results is array so we have to iterate it-->
+<!--
+    <b>
+        <tr>
+            <th style="width: 3%;">Gender</th>
+            <th style="width: 3%;">Title</th>
+            <th style="width: 3%;">FirstName</th>
+            <th style="width: 3%;">Last Name</th>
+            <th style="width: 3%;">Street Number</th>
+            <th style="width: 3%;">Street Name</th>
+            <th style="width: 3%;">City</th>
+            <th style="width: 3%;">State</th>
+            <th style="width: 3%;">Country</th>
+            <th style="width: 3%;">PostCode</th>
+            <th style="width: 3%;">Latitude</th>
+            <th style="width: 3%;">Longitude</th>
+            <th style="width: 3%;">Offset</th>
+            <th style="width: 3%;">Description</th>
+            <th style="width: 3%;">Email</th>
+            <th style="width: 3%;">Login</th>
+            <th style="width: 3%;">UUID</th>
+            <th style="width: 3%;">UserName</th>
+            <th style="width: 3%;">Password</th>
+            <th style="width: 3%;">Salt</th>
+            <th style="width: 3%;">MD5</th>
+            <th style="width: 3%;">sha1</th>
+            <th style="width: 3%;">sha256</th>
+            <th style="width: 3%;">DoB</th>
+            <th style="width: 3%;">Age</th>
+            <th style="width: 3%;">Registered-Date</th>
+            <th style="width: 3%;">Registered-Age</th>
+            <th style="width: 3%;">Phone</th>
+            <th style="width: 3%;">Cell</th>
+            <th style="width: 3%;">id-name</th>
+            <th style="width: 3%;">id-value</th>
+            <th style="width: 3%;">picture-url</th>
+            <th style="width: 3%;">nat</th>
+        </tr>
+    </b>
+    <div *ngFor="let results of responseData.results">
+        <tr>
+            <td style="width: 3%;"> {{ results.gender }} </td>
+            <td style="width: 3%;"> {{ results.name.title }} </td>
+            <td style="width: 3%;"> {{ results.name.first }} </td>
+            <td style="width: 3%;"> {{ results.name.last }} </td>
+            <td style="width: 3%;"> {{ results.location.street.streetNumber }} </td>
+            <td style="width: 3%;"> {{ results.location.street.streetName }} </td>
+            <td style="width: 3%;"> {{ results.location.city }} </td>
+            <td style="width: 3%;"> {{ results.location.state }} </td>
+            <td style="width: 3%;"> {{ results.location.country }} </td>
+            <td style="width: 3%;"> {{ results.location.postcode }} </td>
+            <td style="width: 3%;"> {{ results.location.coordinates.latitude }} </td>
+            <td style="width: 3%;"> {{ results.location.coordinates.longitude }} </td>
+            <td style="width: 3%;"> {{ results.location.timezone.offset }} </td>
+            <td style="width: 3%;"> {{ results.location.timezone.description }} </td>
+            <td style="width: 3%;"> {{ results.email }} </td>
+            <td style="width: 3%;"> {{ results.login.uuid }} </td>
+            <td style="width: 3%;"> {{ results.login.username }} </td>
+            <td style="width: 3%;"> {{ results.login.password }} </td>
+            <td style="width: 3%;"> {{ results.login.salt }} </td>
+            <td style="width: 3%;"> {{ results.login.md5 }} </td>
+            <td style="width: 3%;"> {{ results.login.sha1 }} </td>
+            <td style="width: 3%;"> {{ results.login.sha256 }} </td>
+            <td style="width: 3%;"> {{ results.dob.dobDate }} </td>
+            <td style="width: 3%;"> {{ results.dob.dobAge }} </td>
+            <td style="width: 3%;"> {{ results.registered.regDate }} </td>
+            <td style="width: 3%;"> {{ results.registered.regAge }} </td>
+            <td style="width: 3%;"> {{ results.phone }} </td>
+            <td style="width: 3%;"> {{ results.cell }} </td>
+            <td style="width: 3%;"> {{ results.modelId.name }} </td>
+            <td style="width: 3%;"> {{ results.modelId.value }} </td>
+            <td style="width: 3%;"> {{ results.picture.thumbnail }} </td>
+            <td style="width: 3%;"> {{ results.nat }} </td>
+        </tr>
+    </div>
+    <div>
+        <tr>
+            <td> Seed - {{ responseData.info.seed }} </td>
+            <td> Results - {{ responseData.info.results }} </td>
+            <td> Page - {{ responseData.info.page }} </td>
+            <td> Version - {{ responseData.info.version }} </td>
+        </tr>
+    </div> 
+</table> -->
+
+
+<table style="width: 100%;" border="1">
+  <!-- Results is array so we have to iterate it-->
+  <tr>
+    <!-- <td style="widtd: 25%;">Column 1</td> -->
+    <th style="width: 5%;">Gender</th>
+    <th style="width: 7%;">Title</th>
+    <th style="width: 10%;">First Name</th>
+    <th style="width: 15%;">Street Name</th>
+    <th style="width: 10%;">Country</th>
+    <th style="width: 20%;">Email</th>
+    <th style="width: 10%;">User Name</th>
+    <th style="width: 15%;">DoB</th>
+    <th style="width: 10%;">Cell</th>
+  </tr>
+  <tr *ngFor="let results of responseData.results">
+    <td style="width: 5%;"> {{ results.gender }} </td>
+    <td style="width: 7%;"> {{ results.name.title }} </td>
+    <td style="width: 10%;"> {{ results.name.first }} </td>
+    <td style="width: 15%;"> {{ results.location.street.streetName }} </td>
+    <td style="width: 10%;"> {{ results.location.country }} </td>
+    <td style="width: 20%;"> {{ results.email }} </td>
+    <td style="width: 10%;"> {{ results.login.username }} </td>
+    <td style="width: 15%;"> {{ results.dob.dobDate }} </td>
+    <td style="width: 10%;"> {{ results.cell }} </td>
+  </tr>
+  <!-- <div>
+      <tr>
+          <td> Seed - {{ responseData.info.seed }} </td>
+          <td> Results - {{ responseData.info.results }} </td>
+          <td> Page - {{ responseData.info.page }} </td>
+          <td> Version - {{ responseData.info.version }} </td>
+      </tr>
+  </div> -->
+</table>
+------------------------------------------------------
+<p>responseData --></p>
+<pre>{{ responseData | json }}</pre>
+------------------------------------------------------
+
+<p>
+  <button (click)="getLogsResponseData()">Get Logs</button>
+</p>
+
+<table style="width: 100%;" border="1">
+  <!-- Results is array so we have to iterate it-->
+  <tr>
+    <!-- <td style="widtd: 25%;">Column 1</td> -->
+    <th style="width: 5%;">DB Seq ID</th>
+    <th style="width: 7%;">UID</th>
+    <th style="width: 10%;">Log Generation Time</th>
+    <th style="width: 10%;">Work Flow Name</th>
+    <th style="width: 10%;">Stage Name</th>
+    <th style="width: 20%;">Logger Info</th>
+    <th style="width: 20%;">Message</th>
+  </tr>
+  <tr *ngFor="let logs of logsData">
+    <td style="width: 5%;"> {{ logs.id }} </td>
+    <td style="width: 10%;"> {{ logs.uid }} </td>
+    <td style="width: 15%;"> {{ logs.logGenerationTime }} </td>
+    <td style="width: 10%;"> {{ logs.workFlowName }} </td>
+    <td style="width: 10%;"> {{ logs.stageName }} </td>
+    <td style="width: 20%;"> {{ logs.loggerInfo }} </td>
+    <td style="width: 20%;"> {{ logs.message}} </td>
+  </tr>
+  
+</table>
+
+<!-- <table>
+  <tdead>
+    <tr *ngFor="let item of responseData | keyvalue">
+      <th>{{item.key}}</th>
+      <th>{{item.value}}</th>
+    </tr>
+  </thead>
+  ----
+  <tbody>
+    <table *ngFor="let item of responseData | keyvalue">
+      <td>key -- {{item.key}}</td>
+      <tr *ngFor="let list of item | keyvalue">{{list.key }} || {{list.value }}
+        ----iterate on listValue
+        <td *ngFor="let listValue of list | keyvalue">{{listValue.value}}</td>
+      </tr>
+    </table>
+  </tbody> -->
